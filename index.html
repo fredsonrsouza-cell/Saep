@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAEPVision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="menu" hidden>
+  <button id="fecharMenu" class="x" aria-label="Fechar">&times;</button>
+  <img id="menuFoto" class="foto" src="assets/perfis/saepvision.jpg" alt="">
+  <p id="menuNome"></p>
+  <p id="menuLikes"></p>
+  <p id="menuPubs"></p>
+  <button id="btnSuas" class="destaque">Suas publicações</button>
+  <button id="btnLogout" class="preto">Logout</button>
+</aside>
+
+<div id="pagina">
+  <header>
+    <div id="secUsuario">
+      <img id="avatar" class="foto" src="assets/perfis/saepvision.jpg" alt="Perfil">
+      <span id="nomeUsuario">@SAEPVision</span>
+      <button id="btnPerfil" class="preto" disabled>Ver Perfil</button>
+    </div>
+    <h1 id="empresa">SAEPVision</h1>
+    <div id="secLogin"><button id="btnLogin" class="preto">Login</button></div>
+  </header>
+
+  <main>
+    <section id="viewGaleria">
+      <div class="busca">
+        <input id="busca" type="text" placeholder="Digite o nome do fotógrafo... ex: @fotografo1" autocomplete="off">
+        <button id="btnBusca" aria-label="Buscar"><img src="assets/lupa.svg" alt=""></button>
+      </div>
+      <p id="msgBusca" class="erro"></p>
+      <div id="galeria" class="grade"></div>
+    </section>
+
+    <section id="viewRegistro" hidden>
+      <form id="formFoto" novalidate>
+        <label for="titulo">Título da Imagem</label>
+        <input id="titulo" placeholder="Ex.: Dedo de Deus">
+        <span class="erro" id="eTitulo"></span>
+        <label for="local">Fonte de origem</label>
+        <input id="local" placeholder="Ex.: Rio de Janeiro">
+        <span class="erro" id="eLocal"></span>
+        <label for="arquivo">Imagem</label>
+        <div class="arquivo">
+          <label for="arquivo" class="botao-arquivo">Escolher arquivo</label>
+          <span id="nomeArquivo">Nenhum arquivo escolhido</span>
+          <input id="arquivo" type="file" accept=".jpg,.jpeg,.png,.gif,.webp" hidden>
+        </div>
+        <span class="erro" id="eImagem"></span>
+        <button type="submit" class="preto">Cadastrar</button>
+      </form>
+      <div id="minhas"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>SAEPVision</span>
+    <div class="redes">
+      <img src="assets/instagram.svg" alt="Instagram"><img src="assets/tiktok.svg" alt="TikTok">
+      <img src="assets/linkedin.svg" alt="LinkedIn"><img src="assets/youtube.svg" alt="YouTube">
+    </div>
+    <span>Copyright 2026-2027</span>
+  </footer>
+</div>
+
+<div id="overlay" hidden>
+  <form id="formLogin" novalidate>
+    <button type="button" id="fecharLogin" class="x" aria-label="Fechar">&times;</button>
+    <h2>Login</h2>
+    <input id="email" type="email" placeholder="Digite seu e-mail">
+    <span class="erro" id="eEmail"></span>
+    <input id="senha" type="password" placeholder="Digite sua senha">
+    <span class="erro" id="eSenha"></span>
+    <span class="erro" id="eLogin"></span>
+    <div class="acoes">
+      <button type="button" id="cancelar" class="contorno">Cancelar</button>
+      <button type="submit" class="preto">Login</button>
+    </div>
+  </form>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

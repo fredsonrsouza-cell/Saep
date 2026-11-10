@@ -1,0 +1,7 @@
+SAEPVision (Node.js)
+1. Ligue o MySQL (XAMPP) e importe o saepvision.sql (nesta pasta) pelo phpMyAdmin: aba Importar.
+2. No terminal, dentro desta pasta:  npm install
+3. Depois:  npm start
+4. Abra http://localhost:3000
+Se o MySQL tiver senha, ajuste user/password no inicio do server.js.
+Logins (senha 123456): fotografo1@saepvision.com, fotografo2@saepvision.com, fotografo3@saepvision.com | usuario1@saepvision.com, usuario2@saepvision.com, usuario3@saepvision.com
